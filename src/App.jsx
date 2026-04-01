@@ -1,7 +1,6 @@
 import Kelas from "./kelas.jsx";
 import ProductApp from "./ProductApp.jsx";
 
-
 function App(){
   return(
     <main>
