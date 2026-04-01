@@ -1,6 +1,5 @@
 import React from "react";
 
-
 class Kelas extends React.Component {
   state = {
     counter: 0
