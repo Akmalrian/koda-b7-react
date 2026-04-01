@@ -7,7 +7,6 @@ class ProductApp extends React.Component {
     products: []
   };
 
-  // Fungsi jembatan untuk menambah data ke array products
   handleAddProduct = (newProduct) => {
     this.setState((prevState) => ({
       products: [...prevState.products, newProduct]
