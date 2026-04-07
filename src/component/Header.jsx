@@ -6,7 +6,7 @@ function Header() {
       <nav className="container w-full px-6 py-4 flex justify-between items-center">
         <h1 className="font-bold italic">Minitask React JS</h1>
         <ul className="flex space-x-6">
-          <li className="text-xl font-bold">
+          <li className="text-lg font-bold ">
             <NavLink
               to={"/"}
               className={({ isActive }) => {
@@ -30,7 +30,7 @@ function Header() {
               Increase & Decrease
             </NavLink>
           </li>
-          <li className="text-xl font-bold">
+          <li className="text-lg font-bold">
             <NavLink
               to={"/product"}
               className={({ isActive }) => {
@@ -42,7 +42,7 @@ function Header() {
               Form Product
             </NavLink>
           </li>
-          <li className="text-xl font-bold">
+          <li className="text-lg font-bold">
             <NavLink
               to={"/pokemon"}
               className={({ isActive }) => {
@@ -54,7 +54,7 @@ function Header() {
               List Pokemon
             </NavLink>
           </li>
-          <li className="text-xl font-bold">
+          <li className="text-lg font-bold">
             <NavLink
               to={"/review"}
               className={({ isActive }) => {
@@ -64,6 +64,18 @@ function Header() {
               }}
             >
               Review
+            </NavLink>
+          </li>
+          <li className="text-lg font-bold">
+            <NavLink
+              to={"/characters"}
+              className={({ isActive }) => {
+                return isActive
+                  ? "text-blue-800"
+                  : "text-black hover:text-blue-400";
+              }}
+            >
+              Rick And Morty
             </NavLink>
           </li>
         </ul>

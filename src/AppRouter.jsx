@@ -7,6 +7,8 @@ import App from "./pages/App";
 import ProductApp from "./pages/ProductApp";
 import { BrowserRouter, Route, Routes } from "react-router";
 import Review from "./pages/Review";
+import CharacterDetail from "./pages/CharacterDetail";
+import CharacterList from "./pages/CharacterList";
 
 function AppRouter(){
   return(
@@ -18,6 +20,11 @@ function AppRouter(){
       <Route path="/product" element={<ProductApp />}/>
       <Route path="/pokemon" element={<AppPokemon />}/>
       <Route path="/review" element={<Review />}/>
+      <Route path="/characters">
+        <Route index element={<CharacterList />}/>
+        <Route path=":slug/:id" element={<CharacterDetail />} />
+      </Route>
+
     </Routes>
     <Footer />
     </BrowserRouter>
