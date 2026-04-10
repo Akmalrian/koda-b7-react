@@ -5,7 +5,7 @@ function Header() {
     <header className="bg-red-600 text-white top-0">
       <nav className="container w-full px-6 py-4 flex justify-between items-center">
         <h1 className="font-bold italic">Minitask React JS</h1>
-        <ul className="flex space-x-6">
+        <ul className="flex gap-4">
           <li className="text-lg font-bold ">
             <NavLink
               to={"/"}
@@ -76,6 +76,18 @@ function Header() {
               }}
             >
               Rick And Morty
+            </NavLink>
+            </li>
+            <li className="text-lg font-bold">
+            <NavLink
+              to={"/usefetch"}
+              className={({ isActive }) => {
+                return isActive
+                  ? "text-blue-800"
+                  : "text-black hover:text-blue-400";
+              }}
+            >
+              UseFetch
             </NavLink>
           </li>
         </ul>

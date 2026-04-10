@@ -9,6 +9,8 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import Review from "./pages/Review";
 import CharacterDetail from "./pages/CharacterDetail";
 import CharacterList from "./pages/CharacterList";
+import UseFetchList from "./pages/useFetchList";
+
 
 function AppRouter(){
   return(
@@ -24,6 +26,7 @@ function AppRouter(){
         <Route index element={<CharacterList />}/>
         <Route path=":slug/:id" element={<CharacterDetail />} />
       </Route>
+      <Route path="/usefetch" element={<UseFetchList />}/>
 
     </Routes>
     <Footer />

@@ -1,4 +1,4 @@
-function ListProduct() {
+function ProductLayout() {
   return (
     <>
     <Header />
@@ -8,4 +8,4 @@ function ListProduct() {
   );
 }
 
-export default ListProduct;
+export default ProductLayout;

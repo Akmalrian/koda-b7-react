@@ -1,5 +1,5 @@
 
-function Login() {
+function AuthLayout() {
   return (
     <>
     <Outlet />
@@ -8,4 +8,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default AuthLayout;

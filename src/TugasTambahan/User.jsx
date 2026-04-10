@@ -1,4 +1,4 @@
-function Profile() {
+function UserLayout() {
   return (
     <>
     <Header />
@@ -9,4 +9,4 @@ function Profile() {
   );
 }
 
-export default Profile;
+export default UserLayout;
