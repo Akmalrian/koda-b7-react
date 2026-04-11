@@ -5,7 +5,7 @@ const Home = () => (
     <p className="text-xl text-gray-600 mx-auto">
       Minitask Koda React JS
     </p>
-    <div className="mt-10">
+    <div className="mt-25">
     </div>
   </section>
 );

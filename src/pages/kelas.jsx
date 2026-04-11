@@ -20,7 +20,7 @@ class Kelas extends React.Component {
   render() {
     const { counter } = this.state;
     return (
-        <section className="flex flex-col items-center justify-center p-10 bg-green-300 rounded-xl shadow-lg max-w-sm mx-auto mt-10">
+        <section className="flex flex-col items-center justify-center p-10 bg-green-300 rounded-xl shadow-lg max-w-sm mx-auto mt-20">
         <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-widest">
           Komponen Kelas
         </h2>

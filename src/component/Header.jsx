@@ -1,11 +1,14 @@
+import { useContext } from "react";
 import { NavLink } from "react-router";
+import LoginContext from "../authContext/context";
 
 function Header() {
+  const { user, logout, editProfile } = useContext(LoginContext);
+
   return (
     <header className="bg-red-600 text-white top-0">
-      <nav className="container w-full px-6 py-4 flex justify-between items-center">
-        <h1 className="font-bold italic">Minitask React JS</h1>
-        <ul className="flex gap-4">
+      <nav className="container w-full px-6 py-4 flex justify-center items-center">
+        <ul className="flex gap-8">
           <li className="text-lg font-bold ">
             <NavLink
               to={"/"}
@@ -20,7 +23,7 @@ function Header() {
           </li>
           <li className="text-xl font-bold">
             <NavLink
-              to={"/increase&decrease"}
+              to={"/increase-decrease"}
               className={({ isActive }) => {
                 return isActive
                   ? "text-blue-800"
@@ -77,8 +80,8 @@ function Header() {
             >
               Rick And Morty
             </NavLink>
-            </li>
-            <li className="text-lg font-bold">
+          </li>
+          <li className="text-lg font-bold">
             <NavLink
               to={"/usefetch"}
               className={({ isActive }) => {
@@ -89,6 +92,36 @@ function Header() {
             >
               UseFetch
             </NavLink>
+          </li>
+          <li>
+            {user ? (
+              <section className="flex items-center gap-2">
+                <p className="text-blue-400 font-bold">{user.name}</p>
+                <img
+                  className="w-10 rounded-full"
+                  src={user?.photo || "/image/blank-photo.jpg"}
+                  alt="blank-photo"
+                />
+                <select
+                  className="bg-blue-400"
+                  onChange={(e) => {
+                    if (e.target.value === "profile") editProfile();
+                    if (e.target.value === "logout") logout();
+                  }}
+                >
+                  <option disabled selected hidden>Pilih Menu</option>
+                  <option value="profile">Profile</option>
+                  <option value="logout">Logout</option>
+                </select>
+              </section>
+            ) : (
+              <NavLink
+                className="border ml-2 font-bold text-white bg-orange-400 p-2 px-4 rounded-md"
+                to={"/login"}
+              >
+                Login
+              </NavLink>
+            )}
           </li>
         </ul>
       </nav>
