@@ -93,6 +93,18 @@ function Header() {
               UseFetch
             </NavLink>
           </li>
+          <li className="text-lg font-bold">
+            <NavLink
+              to={"/form-perokok"}
+              className={({ isActive }) => {
+                return isActive
+                  ? "text-blue-800"
+                  : "text-black hover:text-blue-400";
+              }}
+            >
+              Form Survey Perokok
+            </NavLink>
+          </li>
           <li>
             {user ? (
               <section className="flex items-center gap-2">

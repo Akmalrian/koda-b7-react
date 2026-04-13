@@ -9,7 +9,8 @@ import CharacterList from "./pages/CharacterList";
 import UseFetchList from "./pages/useFetchList";
 import { EditProfile } from "./pages/Profile";
 import { Layout } from "./pages/Layout";
-import { Login } from "./pages/FormCOntext";
+import { Login } from "./pages/FormContext";
+import SurveyRedux from "./pages/SurveyRedux";
 
 
 function AppRouter() {
@@ -29,6 +30,7 @@ function AppRouter() {
             <Route path=":slug/:id" element={<CharacterDetail />} />
           </Route>
           <Route path="/usefetch" element={<UseFetchList />} />
+          <Route path="/form-perokok" element={<SurveyRedux />} />
         </Route>
       </Routes>
 

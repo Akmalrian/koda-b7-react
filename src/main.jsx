@@ -6,13 +6,17 @@ import "./index.css";
 import AppRouter from "./AppRouter.jsx";
 import { BrowserRouter } from "react-router";
 import LoginProvider from "./authContext/Provider.jsx";
+import { Provider } from "react-redux";
+import store from "./redux/store.js";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter>
-      <LoginProvider>
-        <AppRouter />
-      </LoginProvider>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <LoginProvider>
+          <AppRouter />
+        </LoginProvider>
+      </BrowserRouter>
+    </Provider>
   </StrictMode>,
 );
